@@ -42,7 +42,7 @@ const LANG_LABELS = { ru: "🇷🇺 RU", en: "🇬🇧 EN", tj: "🇹🇯 TJ" };
 
 const PHOTOS = {
   hero:  "/img/1.png",
-  about: "/img/2.png",
+  about: "/img/2.jpg",
   map:   "/img/1.png",
   gallery: [
     "/img/3.png",

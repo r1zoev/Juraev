@@ -345,7 +345,7 @@ body::after {
 }
 
 .hero__card {
-  background: linear-gradient(145deg, rgba(227,211,168,0.75) 0%, rgba(237,224,192,0.9) 45%, rgba(227,211,168,0.75) 100%);
+  background: linear-gradient(145deg, #B9860B 0%, #D8A427 45%, #B9860B 100%);
   border-top: 1px solid var(--border2);
   border-bottom: 1px solid var(--border2);
   padding: 80px 64px;
@@ -388,6 +388,7 @@ body::after {
   color: var(--gold);
   margin-bottom: 20px;
   line-height: 1.2;
+  color: #fff;
 }
 .hero__kicker::before { display: none; }
 
@@ -402,17 +403,20 @@ body::after {
   line-height: 1.05; letter-spacing: -0.01em;
   color: var(--ink2); margin-bottom: 12px;
   text-shadow: 2px 2px 4px rgba(44,31,14,0.10);
+  color: #fff;
 }
 
 .hero__years {
   font-family: var(--fd); font-size: 1.05rem;
   font-style: italic; color: var(--sepia);
   margin-bottom: 20px; letter-spacing: 0.14em;
+  color: #fff;
 }
 
 .hero__desc {
   font-family: var(--fb); font-size: 1rem; line-height: 1.8;
   color: var(--brown); max-width: 420px; margin-bottom: 40px;
+  color: #fff;
 }
 
 .hero__badges { display: flex; gap: 10px; flex-wrap: wrap; }
@@ -976,7 +980,7 @@ body::after {
     gap: 28px; min-height: auto;
   }
   .hero__photo-wrap { order: -1; }
-  .hero__photo { aspect-ratio: 16/9; }
+  .hero__photo { aspect-ratio: 9/12; }
   .hero__name { font-size: 2.4rem; }
   .hero__desc { max-width: 100%; }
   .hero__badges { gap: 8px; }
