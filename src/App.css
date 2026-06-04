@@ -789,8 +789,7 @@ body::after {
 
 .gallery__grid {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-auto-rows: 196px;
+  grid-template-columns: repeat(4,2fr);
   gap: 10px;
 }
 
@@ -800,6 +799,7 @@ body::after {
   background: var(--parch3);
   border: 1px solid var(--border2);
   transition: transform 0.28s ease, box-shadow 0.28s ease;
+  aspect-ratio: 1 / 1;
 }
 .g-cell:hover { transform: scale(1.03); box-shadow: var(--sh-lg); z-index: 5; }
 .g-cell--wide { grid-column: span 2; }
@@ -810,6 +810,7 @@ body::after {
   background: linear-gradient(to top, rgba(44,31,14,0.62), transparent 50%);
   opacity: 0; transition: opacity 0.28s ease;
   display: flex; align-items: flex-end; padding: 14px;
+  aspect-ratio: (10/1)
 }
 .g-cell:hover .g-cell__overlay { opacity: 1; }
 .g-cell__label {
@@ -990,7 +991,7 @@ body::after {
   .conference__grid  { grid-template-columns: 1fr; }
   .contacts__grid    { grid-template-columns: 1fr; }
   .footer__grid      { grid-template-columns: 1fr; gap: 28px; }
-  .gallery__grid     { grid-template-columns: repeat(2,1fr); grid-auto-rows: 150px; }
+  .gallery__grid     { grid-template-columns: repeat(2,1fr); }
   .g-cell--wide      { grid-column: span 2; }
   .g-cell--tall      { grid-row: span 1; }
   .conf-stats        { gap: 20px; }
@@ -1001,7 +1002,7 @@ body::after {
   .hero__card { padding: 26px 16px 34px; }
   .hero__name { font-size: 1.9rem; }
   .hero__badges { flex-direction: column; align-items: flex-start; }
-  .gallery__grid     { grid-template-columns: 1fr; grid-auto-rows: 170px; }
+  .gallery__grid     { grid-template-columns: 1fr; }
   .g-cell--wide      { grid-column: span 1; }
   .conf-stats        { flex-direction: column; gap: 14px; }
 }

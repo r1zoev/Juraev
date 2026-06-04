@@ -350,16 +350,16 @@ function Conference({ t }) {
 
 // ── GALLERY ──────────────────────────────────────────────────
 function Gallery({ t }) {
-  const cells = [
-    { cls: "g-cell g-cell--wide g-cell--tall", i: 0 },
-    { cls: "g-cell", i: 1 },
-    { cls: "g-cell", i: 2 },
-    { cls: "g-cell g-cell--wide", i: 3 },
-    { cls: "g-cell", i: 4 },
-    { cls: "g-cell", i: 5 },
-    { cls: "g-cell", i: 6 },
-    { cls: "g-cell", i: 7 },
-  ];
+ const cells = [
+  { cls: "g-cell", i: 0 },
+  { cls: "g-cell", i: 1 },
+  { cls: "g-cell", i: 2 },
+  { cls: "g-cell", i: 3 },
+  { cls: "g-cell", i: 4 },
+  { cls: "g-cell", i: 5 },
+  { cls: "g-cell", i: 6 },
+  { cls: "g-cell", i: 7 },
+];
 
   return (
     <section id="gallery" className="sec gallery">
