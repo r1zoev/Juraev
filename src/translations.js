@@ -34,7 +34,7 @@ export const LANGS = {
       { num:"06", name:"«Чашмони сиёҳ»", desc:"Романтическая газель о чёрных очах — один из самых узнаваемых шедевров" },
     ],
 
-    recognitionLabel: "Признание", recognitionTitle: "Слово\nсовременников",
+    recognitionLabel: "Признание", recognitionTitle: "Высказывания \nсовременников",
     tributes: [
       { quote: "Творческое и исполнительское искусство, самобытное народное наследие мастера музыки Акашарифа Джураева занимают особое место в истории таджикской музыки XX века, и своим высоким мастерством он ещё больше обогатил и приумножил это духовное богатство нашего народа.", name: "Эмомали Рахмон", role: "Президент Республики Таджикистан" },
       { quote:"Акашариф Джураев сумел соединить народные традиции и профессиональное искусство, сделав музыку Таджикистана узнаваемой далеко за его пределами.", name:"Садриддин Айни", role:"Основоположник таджикской советской литературы" },
@@ -125,7 +125,7 @@ export const LANGS = {
       { num:"06", name:'"Chashmoni Siyoh"', desc:"A romantic ghazal — one of the most recognized masterpieces" },
     ],
 
-    recognitionLabel: "Recognition", recognitionTitle: "Words of His\nContemporaries",
+    recognitionLabel: "Recognition", recognitionTitle: "Quotes from \nContemporaries",
     tributes: [
       { quote: "The creative and performing art, as well as the distinctive folk heritage of the master musician Akasharif Juraev, holds a special place in the history of Tajik music of the twentieth-century. Through his exceptional mastery, he further enriched and amplified this spiritual treasure of our people.", name: "Emomali Rahmon", role: "President of the Republic of Tajikistan" },
       { quote:"Akasharif Juraev succeeded in uniting folk traditions and professional artistry, making the music of Tajikistan recognizable far beyond its borders.", name:"Sadriddin Ayni", role:"Founder of Tajik Soviet Literature" },
@@ -216,7 +216,7 @@ export const LANGS = {
       { num:"06", name:"«Чашмони сиёҳ»", desc:"Ғазали романтикӣ — яке аз шоҳкориҳои машҳуртарин" },
     ],
 
-    recognitionLabel: "Арҷгузорӣ", recognitionTitle: "Суханони\nҳамзамонон",
+    recognitionLabel: "Арҷгузорӣ", recognitionTitle: "Гуфтаҳои\nҳамзамонон",
     tributes: [
       { quote: "Санъати эҷодӣ ва иҷроӣ, мероси басо мардумии устоди мусиқӣ Акашариф Ҷӯраев дар таърихи мусиқии асри ХХ тоҷик ҷойгоҳи хос дошта, ӯ бо маҳорати баланди хеш ин сарвати маънавии мардумамонро боз ҳам рангомезу нишотбор намудааст.", name: "Эмомалӣ Раҳмон", role: "Президенти Ҷумҳурии Тоҷикистон" },
       { quote:"Акашариф Ҷӯраев тавонист анъанаҳои мардумиро бо санъати касбӣ муттаҳид кунад ва мусиқии тоҷикро маъруф созад.", name:"Садриддин Айнӣ", role:"Асосгузори адабиёти тоҷики советӣ" },
