@@ -41,7 +41,7 @@ const NAV_IDS = ["about","heritage","recognition","conference","gallery","contac
 const LANG_LABELS = { ru: "🇷🇺 RU", en: "🇬🇧 EN", tj: "🇹🇯 TJ" };
 
 const PHOTOS = {
-  hero:  "/img/1.png",
+  hero:  "/img/1.jpg",
   about: "/img/2.jpg",
   map:   "/img/1.png",
   gallery: [
@@ -348,18 +348,21 @@ function Conference({ t }) {
   );
 }
 
-// ── GALLERY ──────────────────────────────────────────────────
 function Gallery({ t }) {
- const cells = [
-  { cls: "g-cell", i: 0 },
-  { cls: "g-cell", i: 1 },
-  { cls: "g-cell", i: 2 },
-  { cls: "g-cell", i: 3 },
-  { cls: "g-cell", i: 4 },
-  { cls: "g-cell", i: 5 },
-  { cls: "g-cell", i: 6 },
-  { cls: "g-cell", i: 7 },
-];
+  const [current, setCurrent] = useState(0);
+  const total = Math.ceil(PHOTOS.gallery.length / 2);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent(prev => (prev + 1) % total);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [total]);
+
+  const pairs = [];
+  for (let i = 0; i < PHOTOS.gallery.length; i += 2) {
+    pairs.push([PHOTOS.gallery[i], PHOTOS.gallery[i + 1]]);
+  }
 
   return (
     <section id="gallery" className="sec gallery">
@@ -371,22 +374,32 @@ function Gallery({ t }) {
             <p className="gallery__sub">{t.gallerySub}</p>
           </div>
         </Reveal>
-        <div className="gallery__grid">
-          {cells.map(({ cls, i }) => (
-            <Reveal key={i} delay={i * 0.05} className={cls}>
-              <img
-                src={PHOTOS.gallery[i]}
-                alt={t.galleryItems[i]?.label || ""}
-                onError={e => {
-                  e.target.style.display = "none";
-                  e.target.parentElement.style.background = "var(--parch3)";
-                }}
-              />
-              <div className="g-cell__overlay">
-                <span className="g-cell__label">{t.galleryItems[i]?.label}</span>
+
+        <div className="slideshow">
+          <div className="slideshow__track" style={{ transform: `translateX(-${current * 100}%)` }}>
+            {pairs.map((pair, i) => (
+              <div key={i} className="slideshow__slide slideshow__slide--double">
+                {pair.map((src, j) => src && (
+                  <div key={j} className="slideshow__img-wrap">
+                    <img src={src} alt={t.galleryItems[i * 2 + j]?.label || ""} />
+                  </div>
+                ))}
               </div>
-            </Reveal>
-          ))}
+            ))}
+          </div>
+
+          <button className="slideshow__btn slideshow__btn--prev"
+            onClick={() => setCurrent(prev => (prev - 1 + total) % total)}>‹</button>
+          <button className="slideshow__btn slideshow__btn--next"
+            onClick={() => setCurrent(prev => (prev + 1) % total)}>›</button>
+
+          <div className="slideshow__dots">
+            {pairs.map((_, i) => (
+              <button key={i}
+                className={`slideshow__dot${i === current ? " active" : ""}`}
+                onClick={() => setCurrent(i)} />
+            ))}
+          </div>
         </div>
       </div>
     </section>
